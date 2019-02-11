@@ -3,33 +3,30 @@
 
 using namespace std;
 
-// Please place your "compare delta" function and body right here
-// See google docs for details
+double compareDelta(double num1, double num2, double delta)   {
+    double difference;
+    double difference2;
+    double abs1;
+    double abs2;
+    difference = num1 - num2;                          //changing num1 and num2
+    difference2 = num2 - num1;
+    abs1 = fabs(difference);
+    abs2 = fabs(difference2);
+    if(abs1 == delta && abs2 == delta)  {    //changing to decision statement
+        return 'T';
 
-int main() {
+    }else   {
+        return 'F';
 
-   /* Type your code here. */
+    }
+}
 
-    double Number1 = 1.205;
-    double Number2 = 1.305;
-    double Delta = 0.100;
-
-    cout << "CompareDelta() Number1: " << Number1 << " Number2: " << Number2 << " Delta " << Delta << " returned: "
-         << compareDelta(Number1, Number2, Delta) << " should be 1 " << endl;
-    Number1 = 1;
-    Number2 = 2;
-    cout << "CompareDelta() Number1: " << Number1 << " Number2: " << Number2 << " Delta " << Delta << " returned: "
-         << compareDelta(Number1, Number2, Delta) << " should be 0 " << endl;
-    Number1 = 2;
-    Number2 = 4;
-    Delta = 2.5;
-    cout << "CompareDelta() Number1: " << Number1 << " Number2: " << Number2 << " Delta " << Delta << " returned: "
-         << compareDelta(Number1, Number2, Delta) << " should be 1 " << endl;
-    Number1 = 1.3058;
-    Number2 = 1.3059;
-    Delta   = 0.00001;
-    cout << "CompareDelta() Number1: " << Number1 << " Number2: " << Number2 << " Delta " << Delta << " returned: "
-         << compareDelta(Number1, Number2, Delta) << " should be 0 " << endl;
-
-   return 0;
+int main()   {
+double num1;
+double num2;
+double delta;
+cin >> num1;
+cin >> num2;
+cin >> delta;
+cout << compareDelta(num1, num2, delta) << endl;
 }
