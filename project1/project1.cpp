@@ -325,7 +325,7 @@ void kitchen()   {              //function for kitchen room
 
             cin >> choice;
 
-            if((choice == 'Y') && (bread = true))   {                                       //Player will get the code for the door if they have bread
+            if((choice == 'Y') && (bread == true))   {                                       //Player will get the code for the door if they have bread
                 cout << "You put the bread in the toaster and push it down with a satifying click" << endl;
                 cout << "After a few moments the toaster bread pops out with a 'Ding'" << endl;
                 cout << "As you move to pick up the bread you notice somthing has been toasted in..." << endl;
@@ -448,7 +448,7 @@ void basement()   {             //function for basement room IS IN PROGRESS FIXM
                     cout << "Do you run for it? (Y/N)" << endl;
                     key = false;
                     cin >> choice;
-                    if((choice == 'Y') && (key = true))   {
+                    if((choice == 'Y') && (key == true))   {
                         cout << "You rush to the door and unlock it to make a quick escape!!!" << endl;
                         end();
                     }
