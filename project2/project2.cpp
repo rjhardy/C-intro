@@ -33,6 +33,7 @@ const int gridSize = 25;
 void printGrid(bool gridOne[gridSize+1][gridSize+1]);
 void determineState(bool gridOne[gridSize+1][gridSize+1]);
 void clearScreen(void);
+void file();
 
 int main(){
 
@@ -56,6 +57,9 @@ int main(){
     cout << "Enter the number of cells, or 'r' to read cells from file: ";
     cout << endl;
 
+    file();
+}
+    void file()   {
     ifstream inFS;      //input file steam
 
     system( "color A" );
@@ -81,7 +85,7 @@ int main(){
 
         if (!inFS.is_open()) {
             cout << "could not open file " << filename << endl;
-            return 1;
+            //return 1;
         }
         else {
             string fileline,xx,yy;
@@ -127,7 +131,7 @@ int main(){
       }
     else
       {
-        return 0;
+        //return 0;
       }
 }
 
